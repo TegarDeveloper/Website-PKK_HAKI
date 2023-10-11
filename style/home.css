@@ -1,0 +1,935 @@
+ @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  
+}
+
+:root {
+  /* color font */
+  --color-white: #ffffff;
+  --color-white2: #bababa;
+  --color-white3: #cdcdcd;
+  --color-black: #000000;
+
+  /* background */
+  --bg-white: #d7e2e4;
+  --bg-grey: #cfd7d9;
+  --bg-dark: #1e1e1e;
+  --bg-btn-dark: #1e1e1e;
+  --bg-input: #dcdde1;
+
+  /* font size */
+  --px-12: 12px;
+  --px-14: 14px;
+  --px-16: 16px;
+  --px-18: 18px;
+  --px-20: 20px;
+  --px-28: 28px;
+  --px-36: 36px;
+  --px-46: 46px;
+
+  /* font weight */
+  --weight-300: 200;
+  --weight-300: 300;
+  --weight-400: 400;
+  --weight-500: 500;
+  --weight-600: 600;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+}
+
+section {
+  width: 100%;
+}
+
+section::-webkit-scrollbar {
+  width: 0;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.6s;
+  bottom: 650px;
+  z-index: 100000;
+  background: transparent;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+header .navbar-brand {
+  color: var(--color-white);
+}
+
+header .nav-link {
+  font-size: var(--px-16);
+  font-weight: var(--weight-400);
+  color: var(--color-white3);
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+header .nav-link.active {
+  color: var(--color-white);
+}
+
+header .btn {
+  padding: 12px 28px;
+  font-size: var(--px-14);
+  background-color: transparent;
+  border: 1px solid var(--color-white);
+  color: var(--color-white);
+  border-radius: 30px;
+}
+
+header .btn:hover {
+  padding: 12px 28px;
+  font-size: var(--px-14);
+  background-color: var(--color-white);
+  border: 1px solid var(--color-white);
+  color: var(--color-black);
+  border-radius: 30px;
+}
+
+header.sticky {
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+}
+
+/* section1 */
+.section1 {
+  width: 100%;
+  height: 100vh;
+  background-image: url(/images/patung-jir.jpeg);
+  background-position: center;
+  background-size: cover;
+  padding-top: 180px;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  
+}
+
+.section1::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 60vh;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to top, rgb(0,0,0), rgba(0,0,0,0));
+}
+
+
+.section1 .content {
+  color: white;
+  position: static;
+}
+
+.section1 .content h1 {
+  font-size: 54px;
+}
+
+.section1 .content .button {
+  margin-top: 40px;
+}
+
+.section1 .content a {
+  color: white;
+  background: linear-gradient(-45deg, #b60aef, #8a54ff);
+  padding: 14px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.section1 .content a:hover {
+  opacity: 0.8;
+}
+
+.section1 .content .deskripsi {
+  color: rgba(255, 255, 255, 0.70);
+  font-weight: 300;
+}
+
+.section1 .content .deskripsi i {
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.90);
+}
+
+/* section-introduction */
+.section-introduction {
+  padding-bottom: 10px;
+  background: linear-gradient(to right, rgb(0,0,0) 10%, rgb(27, 27, 27) 80%, #181818 90%);
+}
+
+.section-introduction .title {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+  margin-bottom: 50px;
+}
+
+.section-introduction .title h2 {
+  color: white;
+  font-size: 40px;
+}
+
+.section-introduction .title p {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.section-introduction .title hr {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 50%;
+  background: linear-gradient(-45deg, #b60aef, #8a54ff);
+  height: 4px;
+}
+
+.section-introduction .tab-content .tab-pane .row .col-lg-8 {
+  width: 100%;
+  height: 350px;
+}
+
+.section-introduction .tab-content .tab-pane .row .col-lg-8 .card {
+  background-color: #181818;
+  color: white;
+  height: 350px;
+  border-radius: 30px;
+  padding: 20px 50px;
+}
+
+.section-introduction .tab-content .tab-pane .row .col-lg-8 .card h2 {
+  background: linear-gradient(-45deg, #b60aef, #8a54ff);
+  background-clip: text; /* Menggunakan background sebagai clip untuk teks */
+  -webkit-background-clip: text; /* Tambahan untuk dukungan browser webkit (contoh: Chrome, Safari) */
+  color: transparent;
+}
+
+.section-introduction .tab-content .tab-pane .row .col-lg-8 .card hr {
+  display: flex;
+  width: 15%;
+  margin-right: 50%;
+  background: linear-gradient(-45deg, #b60aef, #8a54ff);
+  height: 4px;
+}
+
+.section-introduction .tab-content .tab-pane .row .col-lg-8 .card p {
+  margin-top: 30px;
+  font-size: 18px;
+  line-height: 4px;
+  opacity: 0.6;
+  color: #c4c4c4;
+}
+
+.section-introduction .tab-content .tab-pane .row .col-lg-8 .card h1 span {
+  color: #8114e0;
+}
+
+.section-introduction .tab-content .tab-pane .row .col-lg-8 .card .konten {
+  margin-top: 45px;
+}
+
+.section-introduction .tab-content .tab-pane .row .col-lg-8 .card .konten .left {
+  width: 60%;
+}
+
+.section-introduction .tab-content .tab-pane .row .col-lg-8 .card .konten .right {
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+.section-introduction .tab-content .tab-pane .row .col-lg-8 .card .konten .right h1 {
+  font-size: 160px;
+  opacity: 0.8;
+  color: #626262;
+  background: linear-gradient(-45deg, #b60aef, #8a54ff);
+  background-clip: text; /* Menggunakan background sebagai clip untuk teks */
+  -webkit-background-clip: text; /* Tambahan untuk dukungan browser webkit (contoh: Chrome, Safari) */
+  color: transparent;
+}
+
+.section-introduction .tab-content .tab-pane .row .col-lg-4 {
+  width: 100%;
+  height: 350px;
+  border-radius: 30px;
+}
+
+.section-introduction .tab-content .tab-pane .row .col-lg-4 .card {
+  background-color: transparent;
+  height: 350px;
+  border-radius: 30px;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.section-introduction .tab-content .tab-pane .row .col-lg-4 .card .kotak {
+  background-color: #000000;
+  width: 100%;
+  height: 350px;
+  position: relative;
+  border-radius: 25px;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+.section-introduction .tab-content .tab-pane .row .col-lg-4 .card .kotak:hover {
+  opacity: 0.8;
+  transition: all 0.3s ease;
+  box-shadow: 0px 0px 20px 4px #8114e0 !important;
+}
+
+.section-introduction .tab-content .tab-pane .row .col-lg-4 .card .kotak h2{
+  color: white;
+}
+
+.section-introduction .tab-content .tab-pane .row .col-lg-4 .card .kotak h4{
+  color: #8114e0;
+  opacity: 0.8;
+}
+
+.section-introduction .nav-pills {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.section-introduction .nav-pills .nav-item .nav-link {
+  text-decoration: none;
+  background-color: transparent;
+  height: 130px;
+}
+
+.section-introduction .nav-pills .nav-item .nav-link.active .foto img {
+  text-decoration: none;
+  border: 5px solid #8114e0;
+}
+
+.section-introduction .nav-pills .nav-item .nav-link.active .foto p {
+  text-decoration: none;
+  color: #8114e0;
+}
+
+.section-introduction .nav-pills .nav-item .nav-link .foto img {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.section-introduction .nav-pills .nav-item .nav-link .foto p {
+  margin-top: 8px;
+  color: white;
+}
+
+/* section2 */
+.section2 {
+  padding-bottom: 100px;
+  background: linear-gradient(to right, rgb(0,0,0) 10%, rgb(27, 27, 27) 80%, #181818 90%);
+}
+
+.section2 .title {
+  padding-top: 100px;
+}
+
+.section2 .title h1 {
+  background: linear-gradient(-45deg, #b60aef, #8a54ff);
+  background-clip: text; /* Menggunakan background sebagai clip untuk teks */
+  -webkit-background-clip: text; /* Tambahan untuk dukungan browser webkit (contoh: Chrome, Safari) */
+  color: transparent;
+  font-size: 44px;
+}
+
+.section2 .title p {
+  color: white;
+}
+
+.section2 .col-lg-4 .card {
+  height: 300px;
+  background: none;
+  border: 2px solid #585858;
+  padding: 40px 40px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.section2 .col-lg-4 .card:hover {
+  border: none;
+  background: linear-gradient(-45deg, #b60aef, #8a54ff);
+  color: white !important;
+  box-shadow: 0px 0px 20px 4px #4e4e4e;
+  transition: all 0.3s ease;
+}
+
+.section2 .col-lg-4 .card .number {
+  color: white;
+  background: linear-gradient(-45deg, #b60aef, #8a54ff);
+  border: 1px solid #ffffff;
+  width: 60px;
+  border-radius: 30px;
+  height: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+}
+
+.section2 .col-lg-4 .card h2 {
+  color: white;
+}
+
+.section2 .col-lg-4 .card .info {
+  color: white;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+/* section3 (content-pengertian)*/
+.section3 {
+  padding-bottom: 150px;
+  background-color: #181818;
+}
+
+.section3 .title {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.section3 .title h2 {
+  color: white;
+  font-size: 40px;
+}
+
+.section3 .title p {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.section3 .title hr {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 50%;
+  background: linear-gradient(-45deg, #b60aef, #8a54ff);
+  height: 4px;
+}
+
+.section3 .row {
+  margin-top: 120px;
+}
+
+.section3 .row img {
+  width: 500px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.section3 .row .img-main {
+  z-index: 999;
+}
+
+.section3 .row .img-blur {
+  width: 200px;
+  height: auto;
+  position: absolute;
+  bottom: -80px;
+  right: 20px;
+}
+
+.section3 .row p {
+  color: white;
+  opacity: 0.4;
+  font-weight: 300;
+}
+
+.section3 .row .p-span {
+  background: linear-gradient(-45deg, #b60aef, #8a54ff);
+  font-weight: 500;
+}
+
+.section3 .row h3 {
+  color: white;
+  font-size: 30px;
+}
+
+.section3 .row .button {
+  margin-top: 30px;
+}
+
+.section3 .row .button a {
+  text-decoration: none;
+  background: linear-gradient(-45deg, #b60aef, #8a54ff);
+  padding: 12px 40px;
+  color: white;
+  border-radius: 8px;
+}
+
+/* section4 (content-pengertian)*/
+.section4 {
+  padding-bottom: 100px;
+  background: linear-gradient(to right, rgb(0,0,0) 10%, rgb(27, 27, 27) 80%, #181818 90%);
+}
+
+.section4 .title {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.section4 .title h2 {
+  color: white;
+  font-size: 40px;
+}
+
+.section4 .title p {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.section4 .title hr {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 50%;
+  background-color: #8114e0;
+  height: 4px;
+}
+
+.section4 .pills-button .nav-pills {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 60px;
+  gap: 10px;
+}
+
+.section4 .pills-button .nav-pills li a {
+  color: rgb(68, 68, 68);
+  font-weight: 400;
+}
+
+.section4 .pills-button .nav-pills li a.active {
+  background-color: #8114e0;
+  padding: 8px 14px;
+  color: white;
+  border-radius: 100px;
+}
+
+.section4 .pills-button .tab-content {
+  margin-top: 80px;
+}
+
+.section4 .pills-button .tab-content .col-lg-6 h2 {
+  color: #ffffff;
+}
+
+.section4 .pills-button .tab-content .col-lg-6 h2 span {
+  color: #8114e0;
+}
+
+.section4 .pills-button .tab-content .col-lg-6 p {
+  color: white;
+  opacity: 0.6;
+}
+
+.section4 .pills-button .tab-content .col-lg-6 .code-img {
+  width: 520px;
+  height: 350px;
+  border-radius: 12px;
+}
+
+/* section5 (content-keuntungan)*/
+.section5 {
+  padding-bottom: 100px;
+  background: #181818;
+}
+
+.section5 .title {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.section5 .title h2 {
+  color: white;
+  font-size: 40px;
+}
+
+.section5 .title p {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.section5 .title hr {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 50%;
+  background-color: #8114e0;
+  height: 4px;
+}
+
+.section5 .title2 {
+  margin-top: 80px;
+}
+
+.section5 .title2 h1 {
+  color: #8114e0;
+  font-size: 44px;
+}
+
+.section5 .title2 p {
+  color: white;
+}
+
+.section5 .row .col-lg-6 {
+  margin-top: 30px;
+}
+
+.section5 .row .col-lg-6 .card {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 30px 30px;
+  height: 220px;
+  position: relative;
+  transition: all 0.5s ease;
+}
+
+.section5 .row .col-lg-6 .card:hover {
+  bottom: 10px;
+  box-shadow: 0px 8px 12px 0px #8114e0;
+}
+
+.section5 .row .col-lg-6 .card .top h2 {
+  margin-left: 10px;
+}
+
+.section5 .row .col-lg-6 .card p {
+  opacity: 0.4;
+}
+
+.section5 .row .col-lg-6 .card i {
+  font-size: 36px;
+  color: #8114e0;
+}
+
+/* section6 (content-keuntungan)*/
+.section6 {
+  padding-bottom: 50px;
+  background-color: #000000;
+}
+
+.section6 .title {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.section6 .title h2 {
+  color: white;
+
+  font-size: 40px;
+}
+
+.section6 .title .judul {
+  text-align: left;
+  width: 570px;
+  margin-top: 40px;
+}
+
+
+.section6 .title h1 {
+  font-weight: var(--weight-500);
+  color: white;
+  font-size: var(--px-46);
+}
+
+.section6 .title h1 span {
+  background: linear-gradient(-45deg, #b60aef, #8a54ff);
+  background-clip: text; /* Menggunakan background sebagai clip untuk teks */
+  -webkit-background-clip: text; /* Tambahan untuk dukungan browser webkit (contoh: Chrome, Safari) */
+  color: transparent;
+}
+
+.section6 .title p {
+  color: white;
+  opacity: 0.8;
+}
+
+.section6 .title .line {
+  width: 45%;
+  height: 1px;
+  margin-top: 30px;
+  background-color: var(--color-white2);
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.section6 .title a {
+  text-decoration: none;
+  color: var(--color-white2);
+  font-size: var(--px-16);
+  font-weight: var(--weight-400);
+  margin-left: auto;
+  margin-top: 30px;
+}
+
+.section6 .slide-container {
+  margin: 0 0px;
+  overflow: hidden;
+}
+
+.section6 .card {
+  border-radius: 8px;
+  border: none;
+  background-color: var(--bg-white);
+  background-position: center;
+  background-size: cover;
+}
+
+.section6 .swiper .slide-container .swiper-wrapper .swiper-slide {
+  background-color: #1e1e1e;
+}
+
+.section6 .swiper .slide-container .swiper-wrapper .swiper-slide .image-box {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 40px 40px;
+}
+
+.section6 .swiper .slide-container .swiper-wrapper .swiper-slide .image-box img {
+  width: 250px;
+  height: auto;
+  filter: grayscale(100%);
+  transition: all 0.5s ease;
+}
+
+.section6 .swiper .slide-container .swiper-wrapper .swiper-slide .swiper-slide2 {
+  background-color: #000000 !important;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  color: #000000 !important;
+}
+
+.section6 .swiper .slide-container .swiper-wrapper .swiper-slide .swiper-slide2:hover, 
+.section6 .swiper .slide-container .swiper-wrapper .swiper-slide .image-box img:hover {
+  background-color: #1e1e1e !important;
+  color: #ffffff !important;
+  filter: grayscale(0%);
+}
+
+.section6 .card .image-box p {
+  font-size: var(--px-14);
+  font-weight: var(--weight-500);
+}
+
+.section6 .card .image-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.section6 .card .profile-details {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  column-gap: 12px;
+  padding: 15px;
+}
+
+.section6 .card .profile-details h1 {
+  color: white;
+  text-align: left;
+  background: linear-gradient(-45deg, #b60aef, #8a54ff);
+  background-clip: text; /* Menggunakan background sebagai clip untuk teks */
+  -webkit-background-clip: text; /* Tambahan untuk dukungan browser webkit (contoh: Chrome, Safari) */
+  color: transparent;
+}
+
+.section6 .card .profile-details .text {
+  color: white;
+  padding: 4px 0px;
+  text-align: left;
+}
+
+/* section7 */
+.section7 {
+  height: 1000px;
+  padding-bottom: 100px;
+  background: #181818;
+}
+
+.section7 .title {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.section7 .title h2 {
+  color: white;
+  font-size: 40px;
+}
+
+.section7 .title p {
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.section7 .title hr {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 50%;
+  background-color: #8114e0;
+  height: 4px;
+}
+
+.section7 .content {
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.section7 .content .text {
+  color: white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.section7 .content .text h2 {
+  opacity: 0.5;
+}
+
+.section7 .content .text p {
+  opacity: 0.5;
+}
+
+.section7 .content .gambar {
+  z-index: 999;
+}
+
+.section7 .content .text-imp {
+  
+  z-index: 1;
+}
+
+.section7 .content .text-imp h1 {
+  position: absolute;
+  font-size: 130px;
+  color: rgb(70, 70, 70);
+  margin-top: -360px;
+  margin-left: -100px;
+  opacity: 0.2;
+}
+
+/* section8 */
+.section8 {
+  padding-top: 200px;
+  padding-bottom: 20px;
+  background: #181818;
+
+}
+
+.section8 .card-tebel {
+  padding-bottom: 100px;
+  background: linear-gradient(to right, rgb(0,0,0) 10%, rgb(27, 27, 27) 80%, #181818 90%);
+}
+
+.section8 .card-tebel .col-lg-4 .image {
+  overflow: hidden;
+}
+
+.section8 .card-tebel .col-lg-4 .image img {
+  position: absolute;
+  bottom: -100px;
+}
+
+.section8 .col-lg-8 .text {
+  width: 800px;
+  margin-top: 80px;
+}
+
+.section8 .col-lg-8 .text h1 {
+  color: white;
+}
+
+.section8 .col-lg-8 .text h1 span {
+  color: #8114e0;
+}
+
+.section8 .col-lg-8 .text p {
+  font-size: 20px;
+  color: white;
+  opacity: 0.5;
+}
+
+.section8 .card-tipis {
+  background: #181818;
+  color: white;
+  margin-top: 200px;
+}
+
+.section8 .card-tipis p {
+  opacity: 0.5;
+}
